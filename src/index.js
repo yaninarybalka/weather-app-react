@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Main from "./Main";
 import Current from "./Current";
+import Forecast from "./Forecast";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -13,6 +14,7 @@ root.render(
         <div className="card-body">
           <Main />
           <Current />
+          <Forecast />
         </div>
       </div>
     </div>
