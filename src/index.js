@@ -4,6 +4,7 @@ import "./index.css";
 import Main from "./Main";
 import Current from "./Current";
 import Forecast from "./Forecast";
+import Footer from "./Footer";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -17,6 +18,7 @@ root.render(
           <Forecast />
         </div>
       </div>
+      <Footer />
     </div>
   </React.StrictMode>
 );

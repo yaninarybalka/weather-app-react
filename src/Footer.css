@@ -1,0 +1,14 @@
+footer {
+  font-family: monospace;
+  text-align: center;
+  margin: 30px 0;
+}
+.closing-info {
+  color: #d8907c;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+  font-weight: 900;
+}
+.closing-info:hover {
+  color: #a5acbc;
+}
