@@ -1,8 +1,8 @@
-import React from react;
+import React from "react";
 import "./Current.css";
 
 export default function Current() {
-return (
+  return (
     <div className="container">
       <div className="row current">
         <div className="col-6">
@@ -30,5 +30,5 @@ return (
         </div>
       </div>
     </div>
-)
+  );
 }
