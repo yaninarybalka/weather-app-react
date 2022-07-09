@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+.search-bar {
+  text-align: right;
+  padding-top: 35px;
+  margin: 0 0 40px;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Inconsolata", monospace;
+  font-weight: 200;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.city-info {
+  padding-top: 20px;
+  padding-left: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.city-searcher {
+  border-radius: 30px;
+  border: 1px solid #d8907c;
+}
+.button {
+  background-color: #e0a494;
+  border: 1px solid #d8907c;
+  border-radius: 30px;
+  transition: all 150ms ease-in-out;
+  margin: 0 5px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button:hover {
+  cursor: pointer;
+  background-color: #d8907c;
 }
 
-.App-link {
-  color: #61dafb;
+.geo-button {
+  background-color: #e0a494;
+  border: 1px solid #d8907c;
+  border-radius: 30px;
+  transition: all 150ms ease-in-out;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.geo-button:hover {
+  cursor: pointer;
+  background-color: #d8907c;
 }
