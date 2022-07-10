@@ -1,5 +1,6 @@
 import React from "react";
 import "./Main.css";
+import Data from "./Data";
 
 export default function WeatherInfo(props) {
   return (
@@ -9,7 +10,7 @@ export default function WeatherInfo(props) {
           {props.data.city}
         </div>
         <div className="current-date" id="current-time">
-          date
+          <Data date={props.data.date} />
         </div>
         <div className="current-weather" id="current-weather-description">
           {props.data.description}
