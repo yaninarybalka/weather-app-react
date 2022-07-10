@@ -1,69 +1,70 @@
 import React, { useState } from "react";
 import "./Main.css";
+import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
 
-export default function Main() {
-  let [date, setDate] = useState(null);
+export default function Main(props) {
+  let [weather, setWeather] = useState({ ready: false });
 
-  function displayDate(currentTime) {
-    let hour = currentTime.getHours();
-    if (hour < 10) {
-      hour = `0${hour}`;
-    }
+  let [city, setCity] = useState(props.defaultCity);
 
-    let minute = currentTime.getMinutes();
-
-    if (minute < 10) {
-      minute = `0${minute} `;
-    }
-
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-    let day = days[currentTime.getDay()];
-    setDate(`${day}, ${hour}:${minute}`);
+  function searchCity() {
+    let apiKey = `0e951398a3cfa9bd7988ab651edd4068`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
-  displayDate(new Date());
 
-  return (
-    <div className="row">
-      <div className="col-6 city-info">
-        <div className="current-city" id="current-city">
-          Ternopil
-        </div>
-        <div className="current-date" id="current-time">
-          {date}
-        </div>
-        <div className="current-weather" id="current-weather-description">
-          sunny
-        </div>
-        <div className="city-icon">
-          <img src="" id="city-icon" className="icon" alt="" />
-          <span className="current-temp" id="current-temp">
-            25
-          </span>
-          <span className="temp-sign">°C</span>
-        </div>
-      </div>
+  function handleSubmit(event) {
+    event.preventDefault();
+    searchCity();
+  }
 
-      <div className="col-6">
-        <div className="weather-information">
-          <div>
-            Feels like: <span id="feels-like"> 18°C</span>
-          </div>
-          <div>
-            Wind: <span id="wind-speed"> 10m/s </span>
-          </div>
-          <div>
-            Humidity: <span id="humidity">15%</span>
+  function displaySearch(event) {
+    setCity(event.target.value);
+  }
+
+  function handleResponse(response) {
+    setWeather({
+      ready: true,
+      humidity: response.data.main.humidity,
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      wind: response.data.wind.speed,
+      feels_like: response.data.main.feels_like,
+      icon: response.data.weather[0].icon,
+      city: response.data.name,
+      weatherIcon: "http://openweathermap.org/img/wn/${icon}@2x.png",
+    });
+  }
+
+  if (weather.ready) {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-12 search-bar">
+            <form onSubmit={handleSubmit}>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Enter a city"
+                  className="city-searcher"
+                  id="search-button"
+                  autocomplete="off"
+                  onChange={displaySearch}
+                />
+                <input type="submit" value="Search" className="button" />
+                <button className="geo-button" id="geolocation-button">
+                  Geo
+                </button>
+              </div>
+            </form>
           </div>
         </div>
+        <WeatherInfo data={weather} />
       </div>
-    </div>
-  );
+    );
+  } else {
+    searchCity();
+    return "Loading...";
+  }
 }

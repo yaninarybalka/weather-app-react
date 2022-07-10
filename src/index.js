@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import SearchForm from "./SearchForm";
-import Main from "./Main";
 
+import Main from "./Main";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
 import reportWebVitals from "./reportWebVitals";
@@ -14,8 +13,7 @@ root.render(
     <div className="container">
       <div className="card">
         <div className="card-body">
-          <SearchForm />
-          <Main />
+          <Main defaultCity="Ternopil" />
 
           <Forecast />
         </div>
