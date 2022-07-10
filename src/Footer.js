@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="md ">
       <a
         class="closing-info"
         href="https://github.com/yaninarybalka/weather-app-react"

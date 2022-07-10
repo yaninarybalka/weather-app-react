@@ -8,6 +8,19 @@ export default function Main(props) {
 
   let [city, setCity] = useState(props.defaultCity);
 
+  function showPosition(position) {
+    let lat = position.coords.latitude;
+    let longt = position.coords.longitude;
+    let apiKey = "0e951398a3cfa9bd7988ab651edd4068";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${longt}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
   function searchCity() {
     let apiKey = `0e951398a3cfa9bd7988ab651edd4068`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -52,7 +65,11 @@ export default function Main(props) {
               onChange={displaySearch}
             />
             <input type="submit" value="Search" className="button " />
-            <button className="geo-button " id="geolocation-button">
+            <button
+              className="geo-button "
+              id="geolocation-button"
+              onClick={getCurrentLocation}
+            >
               Geo
             </button>
           </div>

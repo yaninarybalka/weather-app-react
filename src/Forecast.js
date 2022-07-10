@@ -3,12 +3,12 @@ import "./Forecast.css";
 
 export default function Forecast() {
   return (
-    <div class="forecast" id="weather-forecast">
-      <div class="row">
-        <div class="col-2 day1">
-          <div class="day-name">Sat</div>
-          <div class="weather-picture">☀</div>
-          <div class="day-temperature">
+    <div className="forecast mt-3" id="weather-forecast">
+      <div className="row">
+        <div className="col-2 day1">
+          <div className="day-name">Sat</div>
+          <div className="weather-picture">☀</div>
+          <div className="day-temperature">
             <strong> 23° </strong> / 8°C
           </div>
         </div>
