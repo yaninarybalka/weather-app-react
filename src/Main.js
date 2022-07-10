@@ -70,7 +70,7 @@ export default function Main(props) {
               id="geolocation-button"
               onClick={getCurrentLocation}
             >
-              Geo
+              📍
             </button>
           </div>
         </form>
