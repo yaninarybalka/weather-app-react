@@ -14,8 +14,6 @@ root.render(
       <div className="card">
         <div className="card-body">
           <Main defaultCity="Ternopil" />
-
-          <Forecast />
         </div>
       </div>
       <Footer />
