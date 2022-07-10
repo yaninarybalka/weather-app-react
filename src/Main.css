@@ -1,43 +1,61 @@
-.search-bar {
-  text-align: right;
-  padding-top: 35px;
-  margin: 0 0 40px;
-  font-family: "Abril Fatface", cursive;
-  font-family: "Inconsolata", monospace;
-  font-weight: 200;
-}
-
 .city-info {
-  padding-top: 20px;
   padding-left: 25px;
 }
+.current {
+  margin-top: 35px;
+  margin-bottom: 35px;
 
-.city-searcher {
-  border-radius: 30px;
-  border: 1px solid #d8907c;
+  text-align: justify;
 }
-.button {
-  background-color: #e0a494;
-  border: 1px solid #d8907c;
-  border-radius: 30px;
-  transition: all 150ms ease-in-out;
-  margin: 0 5px 0;
-}
-
-.button:hover {
-  cursor: pointer;
-  background-color: #d8907c;
+.current-city {
+  font-size: 40px;
+  text-align: justify;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+  text-shadow: 5px 5px 7px #e8d9b9;
 }
 
-.geo-button {
-  background-color: #e0a494;
-  border: 1px solid #d8907c;
-  border-radius: 30px;
-  transition: all 150ms ease-in-out;
-  padding: 0;
+.current-date {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  font-size: 25px;
 }
 
-.geo-button:hover {
-  cursor: pointer;
-  background-color: #d8907c;
+.current-weather {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.city-icon {
+  margin-top: 20px;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+  text-shadow: 5px 5px 7px #e8d9b9;
+  text-align: center;
+}
+
+.icon {
+  width: 100px;
+}
+
+.current-temp {
+  font-size: 40px;
+}
+
+.temp-sign {
+  font-size: 35px;
+}
+
+.weather-information {
+  font-size: 25px;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  margin-left: 35px;
+  margin-top: 50px;
 }

@@ -1,0 +1,37 @@
+.search-bar {
+  text-align: right;
+  padding-top: 35px;
+  margin: 0 0 40px;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Inconsolata", monospace;
+  font-weight: 200;
+}
+.city-searcher {
+  border-radius: 30px;
+  border: 1px solid #d8907c;
+}
+.button {
+  background-color: #e0a494;
+  border: 1px solid #d8907c;
+  border-radius: 30px;
+  transition: all 150ms ease-in-out;
+  margin: 0 5px 0;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #d8907c;
+}
+
+.geo-button {
+  background-color: #e0a494;
+  border: 1px solid #d8907c;
+  border-radius: 30px;
+  transition: all 150ms ease-in-out;
+  padding: 0;
+}
+
+.geo-button:hover {
+  cursor: pointer;
+  background-color: #d8907c;
+}
