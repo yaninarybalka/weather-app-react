@@ -31,9 +31,9 @@ export default function Main(props) {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       feels_like: response.data.main.feels_like,
-      icon: response.data.weather[0].icon,
+
       city: response.data.name,
-      //weatherIcon: "http://openweathermap.org/img/wn/${icon}@2x.png",
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
     });
   }
