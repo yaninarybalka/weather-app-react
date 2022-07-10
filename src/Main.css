@@ -32,6 +32,7 @@
 
 .city-icon {
   margin-top: 20px;
+  margin-left: -30px;
   font-family: "Abril Fatface", cursive;
   font-family: "Inconsolata", monospace;
   font-weight: 500;
@@ -96,4 +97,20 @@
 .geo-button:hover {
   cursor: pointer;
   background-color: #d8907c;
+}
+
+.temp-sign {
+  color: #212529;
+  padding-left: 3px;
+}
+
+.temp-sign a {
+  font-size: 35px;
+  color: #d8907c;
+  text-decoration: underline;
+  transition: all 150ms ease-in-out;
+}
+
+.temp-sign a:hover {
+  opacity: 0.8;
 }

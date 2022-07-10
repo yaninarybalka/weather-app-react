@@ -41,26 +41,23 @@ export default function Main(props) {
   if (weather.ready) {
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-12 search-bar">
-            <form onSubmit={handleSubmit}>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Enter a city"
-                  className="city-searcher"
-                  id="search-button"
-                  autocomplete="off"
-                  onChange={displaySearch}
-                />
-                <input type="submit" value="Search" className="button" />
-                <button className="geo-button" id="geolocation-button">
-                  Geo
-                </button>
-              </div>
-            </form>
+        <form onSubmit={handleSubmit} className="search-bar">
+          <div>
+            <input
+              type="text"
+              placeholder="Enter a city"
+              className="city-searcher "
+              id="search-button"
+              autocomplete="off"
+              onChange={displaySearch}
+            />
+            <input type="submit" value="Search" className="button " />
+            <button className="geo-button " id="geolocation-button">
+              Geo
+            </button>
           </div>
-        </div>
+        </form>
+
         <WeatherInfo data={weather} />
       </div>
     );
