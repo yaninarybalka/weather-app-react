@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="md ">
       <a
-        class="closing-info"
+        className="closing-info"
         href="https://github.com/yaninarybalka/weather-app-react"
         target="_blank"
         rel="noreferrer"

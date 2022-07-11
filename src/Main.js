@@ -13,7 +13,7 @@ export default function Main(props) {
   function showPosition(position) {
     let lat = position.coords.latitude;
     let longt = position.coords.longitude;
-    let apiKey = "0e951398a3cfa9bd7988ab651edd4068";
+    let apiKey = "c67ae811a0553396681609f896cfc8fc";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${longt}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -24,7 +24,7 @@ export default function Main(props) {
   }
 
   function searchCity() {
-    let apiKey = `0e951398a3cfa9bd7988ab651edd4068`;
+    let apiKey = `c67ae811a0553396681609f896cfc8fc`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -39,7 +39,6 @@ export default function Main(props) {
   }
 
   function handleResponse(response) {
-    console.log(response);
     setWeather({
       ready: true,
       humidity: response.data.main.humidity,

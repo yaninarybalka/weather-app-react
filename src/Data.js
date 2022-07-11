@@ -25,6 +25,6 @@ export default function Data(props) {
   ];
   let day = days[props.date.getDay()];
   let formattedData = `${day}, ${hour}:${minute}`;
-  console.log(formattedData);
+
   return <div>{formattedData}</div>;
 }

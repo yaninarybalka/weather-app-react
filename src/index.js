@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import Main from "./Main";
-import Forecast from "./Forecast";
+
 import Footer from "./Footer";
 import reportWebVitals from "./reportWebVitals";
 
